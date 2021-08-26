@@ -18,7 +18,6 @@ $.ajaxPrefilter(function(options) {
     // 如果不登录直接改url地址为index页面，强制跳转登录页面
     // 这就相当于控制了用户的登录权限，不登录，没有token永远到不了index页面
     options.complete = function(res) {
-        console.log(res);
         // 这的if我是觉得只判断一个status就足够了根本就不用||后面的message
         // 身份认证失败叹号还是中文叹号，我打出来一个英文的，肯定知道毛病处在这个判断上
         //就没想到全等下一个英文的叹号和中文的叹号它不一样
